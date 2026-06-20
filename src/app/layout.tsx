@@ -5,6 +5,7 @@ import {
   DM_Sans,
 } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import { JsonLd } from "@/components/JsonLd";
 import { createSiteMetadata } from "@/lib/seo/metadata";
 
@@ -53,6 +54,7 @@ export default function RootLayout({
         <JsonLd />
         <div className="grain" aria-hidden="true" />
         {children}
+        <Analytics />
       </body>
     </html>
   );
